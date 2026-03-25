@@ -5,7 +5,9 @@ import github from "../assets/github.png"
 import linkedin from "../assets/linkedin.png"
 import MyLinkTree from "../assets/MyLinksTree.png"
 import youtube from "../assets/youtube.png"
+import favicon from "../assets/favicon.png"
 import { motion } from "framer-motion";
+import { DownloadIcon,Mail } from "lucide-react";
 export default function HeroSection({darkMode}){
     const socialIcons= [
         {
@@ -77,7 +79,31 @@ export default function HeroSection({darkMode}){
                         data-aos-once='true'>
                             I am currently pursuing B.Tech in Information Technology at Muzaffarpur Institute of Technology, and i am passionate about software development, data science, and innovative technologies. My goal is to leverage my skills to solve real-world problems and create impactful solutions.
                         </p>
-                        <div></div>
+                        <div className="w-full pt-4 sm:pt-6">
+                            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4"
+                            data-aos='fade-up'
+                            data-aos-delay='700'>
+                                <a href="#" download className="w-full sm:w-auto"> 
+                                    <button className="w-full sm:w-auto inline-flex items-center text-white bg-linear-to-r from-orange-500 to-amber-500 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform">
+                                       <DownloadIcon className="w-4 h-4 sm:h-5 sm:w-5 mr-2"/>    Download CV
+                                    </button>
+                                </a>
+                                <a href="">
+                                    <button className="w-full sm:w-auto inline-flex items-center text-white bg-linear-to-r from-orange-500 to-amber-500 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform">
+                                        <Mail className="w-4 h-4 sm:h-5 sm:w-5 mr-2"/>Contact Me
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="lg:w-1/2 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0 flex justify-center"
+                    data-aos='fade-left'
+                    data-aos-delay='400'>
+                        <div className="realtive w-4/5 sm:w-3/4 lg:w-full">
+                            <div className="relative overflow-hidden">
+                                <img src={favicon} alt="my Image" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
