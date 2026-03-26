@@ -49,10 +49,10 @@ export default function HeroSection({darkMode}){
             data-aos='fade-up'
             data-aos-delat='250'
             className="body-font z-10">
-                <div className="container mx-auto flex px-4 sm:px-8 lg:px-14 py-12 lg-py-32 flex-col lg:flex-row items-center justify-between lg:mt-0 mt-14">
+                <div className="container mx-auto flex px-4 sm:px-8 lg:px-14 py-20 lg-py-32 flex-col lg:flex-row items-center justify-between lg:mt-0 mt-14">
                     <div className="lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0" 
                     >
-                        <div className="flex justify-center lg:justify-start ap-4 sm:gap-6 mb-6 sm:mb-7 w-full" >
+                        <div className="flex justify-center lg:justify-start ap-4 gap-3 mb-6 sm:mb-7 w-full" >
                             {socialIcons.map((social,index)=>(
                                 <motion.a key={index} 
                                 href="#"
@@ -88,8 +88,8 @@ export default function HeroSection({darkMode}){
                                        <DownloadIcon className="w-4 h-4 sm:h-5 sm:w-5 mr-2"/>    Download CV
                                     </button>
                                 </a>
-                                <a href="">
-                                    <button className="w-full sm:w-auto inline-flex items-center text-white bg-linear-to-r from-orange-500 to-amber-500 border-0 py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform">
+                                <a href="#contact" className="w-full">
+                                    <button className={`w-full sm:w-auto inline-flex items-center ${theme.buttonSecondary} text-white  py-3 px-6 sm:px-8 hover:shadow-[0_0_40px_rgb(255,165,0,0.7)] rounded-full text-base sm:text-2xl font-semibold transition-all duration-300 transform`}>
                                         <Mail className="w-4 h-4 sm:h-5 sm:w-5 mr-2"/>Contact Me
                                     </button>
                                 </a>
