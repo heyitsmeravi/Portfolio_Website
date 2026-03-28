@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import { useState,useEffect } from "react";
+import About from "./components/About";
 function App() {
   const [darkMode,setDarkMode]=useState(true);
   useEffect(()=>{
@@ -29,6 +30,7 @@ function App() {
       : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'}> 
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <HeroSection darkMode={darkMode} />
+      <About darkMode={darkMode}/>
     </div>
   );
 }

@@ -79,7 +79,7 @@ export default function HeroSection({darkMode}){
                             Hi, I'm Ravi Kumar
                         </h1>
                         <h2 className=" sm:text-2xl font-bold">
-                        I am{" "}
+                        and I am a{" "}
                         <span className="text-orange-500 text-3xl " data-aos='fade-up'
                         data-aos-delay='600'>
                             <Typewriter
@@ -97,7 +97,8 @@ export default function HeroSection({darkMode}){
                         data-aos='fade-up'
                         data-aos-delay='600'
                         data-aos-once='true'>
-                            I am currently pursuing B.Tech in Information Technology at Muzaffarpur Institute of Technology, and i am passionate about software development, data science, and innovative technologies. My goal is to leverage my skills to solve real-world problems and create impactful solutions.
+                            Currently pursuing B.Tech in Information Technology at Muzaffarpur Institute of Technology, and I am passionate about 
+                            Software Development, Data Science, and innovative Technologies. My goal is to leverage my skills to solve real-world problems and create impactful solutions.
                         </p>
                         <div className="sm:w-full pt-4 sm:pt-6">
                             <div className="flex sm:flex-row justify-center lg:justify-start gap-3 sm:gap-5"
@@ -128,6 +129,7 @@ export default function HeroSection({darkMode}){
                     <div className={`absolute -top-20 -left-20 h-40 w-40 sm:w-64 sm:h-64 mixed-blend-multiply rounded-full filter blur-3xl opacity-10 animate-pulse delay-1000 ${theme.decorativeCircle}`}>
                     </div>
                 </div>
+                
             </section>
         </div>
     );
