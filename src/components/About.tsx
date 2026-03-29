@@ -12,17 +12,12 @@ export default function About({darkMode}){
                             About Me
                         </h1>
                     </header>
-                    <p className={`text-sm sm:justify-start lg:text-lg xl:text-xl mb-6 sm:mb-8 leading-relaxed bg-linear-to-r from-orange-900/10 to-orange-900/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm ${darkMode?'text-gray-300':'text-gray-700'} `}
+                    <p className={`text-sm sm:justify-start lg:text-sm xl:text-xl mb-6 sm:mb-8 leading-relaxed bg-linear-to-r from-orange-900/10 to-orange-900/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm ${darkMode?'text-gray-300':'text-gray-700'} `}
                     data-aos='fade-up'
                     data-aos-delay='500'>
-                    Information Technology undergraduate with a strong focus on Data Structures & Algorithms and modern web development.<br/><br/>
-                    Experienced in building responsive and scalable web applications using JavaScript and React, with an emphasis on clean code, performance, and user experience. <br/><br />
+                        I’m a full-stack developer focused on building scalable, user-friendly web applications. I work with JavaScript, React, Node.js, Python, and the MERN stack to turn ideas into real-world solutions. <br />
 
-                    Currently working on projects like Project Nexus—an intelligent career navigation system that integrates problem-solving, skill tracking, and personalized guidance.
-
-                    Actively improving problem-solving ability through structured DSA practice (Striver Sheet) and consistently building projects that demonstrate practical application of concepts.
-
-                    Focused on writing efficient code, understanding core fundamentals, and developing solutions that are both technically sound and impactful.
+                        Alongside development, I actively strengthen my problem-solving skills through Data Structures & Algorithms . I enjoy learning new technologies, building impactful projects, and continuously improving as a developer.
 
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 sm:gap06 lg:gap-8 mb-6 sm:mb-8">

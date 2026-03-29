@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import { useState,useEffect } from "react";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 function App() {
   const [darkMode,setDarkMode]=useState(true);
   useEffect(()=>{
@@ -31,6 +33,8 @@ function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <HeroSection darkMode={darkMode} />
       <About darkMode={darkMode}/>
+      <Skills darkMode={darkMode}/>
+      <Projects darkMode={darkMode}/>
     </div>
   );
 }
