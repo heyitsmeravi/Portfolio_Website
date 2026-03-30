@@ -8,6 +8,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   const [darkMode,setDarkMode]=useState(true);
   useEffect(()=>{
@@ -37,6 +38,7 @@ function App() {
       <Skills darkMode={darkMode}/>
       <Projects darkMode={darkMode}/>
       <Contacts darkMode={darkMode}/>
+      <Footer darkMode={darkMode}/>
     </div>
   );
 }
