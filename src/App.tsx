@@ -7,6 +7,7 @@ import { useState,useEffect } from "react";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Contacts from "./components/Contact";
 function App() {
   const [darkMode,setDarkMode]=useState(true);
   useEffect(()=>{
@@ -35,6 +36,7 @@ function App() {
       <About darkMode={darkMode}/>
       <Skills darkMode={darkMode}/>
       <Projects darkMode={darkMode}/>
+      <Contacts darkMode={darkMode}/>
     </div>
   );
 }
