@@ -1,4 +1,36 @@
+import { useState } from "react";
+import emailjs from "emailjs-com";
 const Contacts=({darkMode})=>{
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
+    const handleChange=(e)=>{
+        setFormData({
+            ...formData,
+            [e.target.name]:e.target.value
+        })
+    };
+    const handleSubmit=(e)=>{
+        console.log(formData);
+        e.preventDefault();
+        emailjs.send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_PUBLIC_KEY
+        )
+        .then(() => {
+            alert("Message sent successfully!");
+        })
+        .catch(() => {
+            alert("Failed to send message");
+        });
+    };
+
     return (
         <section id="contact" style={{backgroundColor:darkMode?'#111827':'#f9fafb'}} 
         className="py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden" >
@@ -24,7 +56,7 @@ const Contacts=({darkMode})=>{
                     </p>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
-                    <form 
+                    <form onSubmit={handleSubmit}
                     style={{background:darkMode?
                         'linear-gradient(to right,#1f2937,#111827)':'linear-gradient(to right,#ffffff, #f9fafb',
                         borderColor:darkMode?'#374151':'e5e7eb'
@@ -36,6 +68,9 @@ const Contacts=({darkMode})=>{
                             <input 
                             type="text"
                             placeholder="First Name"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}   
                             style={{
                                 backgroundColor:darkMode?'#374151':'#faede3',
                                 borderColor:darkMode?'#4b5563':'#d1d5db',
@@ -47,6 +82,9 @@ const Contacts=({darkMode})=>{
                             <input 
                             type="text"
                             placeholder="Last Name"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
                             style={{
                                 backgroundColor:darkMode?'#374151':'#faede3',
                                 borderColor:darkMode?'#4b5563':'#d1d5db',
@@ -58,6 +96,9 @@ const Contacts=({darkMode})=>{
                             <input 
                             type="text"
                             placeholder="Email Address"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             style={{
                                 backgroundColor:darkMode?'#374151':'#faede3',
                                 borderColor:darkMode?'#4b5563':'#d1d5db',
@@ -69,6 +110,9 @@ const Contacts=({darkMode})=>{
                             <input 
                             type="text"
                             placeholder="Phone Number"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
                             style={{
                                 backgroundColor:darkMode?'#374151':'#faede3',
                                 borderColor:darkMode?'#4b5563':'#d1d5db',
@@ -78,8 +122,11 @@ const Contacts=({darkMode})=>{
                             required
                              />
                             <textarea
+                            name="message"
                             rows='4'
                             placeholder="Your Message"
+                            value={formData.message}
+                            onChange={handleChange}
                             style={{
                                 backgroundColor:darkMode?'#374151':'#faede3',
                                 borderColor:darkMode?'#4b5563':'#d1d5db',

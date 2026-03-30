@@ -1,5 +1,5 @@
-import { footer } from "framer-motion/client";
-import { FaFacebook, FaGithub, FaHeart, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+import { FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer= ({darkMode})=>{
     const currentYear= new Date().getFullYear();

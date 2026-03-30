@@ -87,7 +87,7 @@ export default function Navbar({darkMode,toggleDarkMode}){
                             ):(<Moon className="w-5 h-5 text-gray-700"/>)}
                         </motion.button>
                         <motion.a 
-                        href="#contact"
+                        href="mailto:ravijnv2428@gmail.com"
                         whileHover={{scale:1.05}}
                         whileTap={{scale:0.95}}
                         className={`hidden md:block px-6 py-2 font-semibold rounded-full bg-linear-to-r ${colors.button} text-white shadow-md hover:shadow-lg transition-shadow`}>
