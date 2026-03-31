@@ -18,7 +18,7 @@ const Projects=({darkMode})=>{
                         color:'transparent'
                         }}>Projects</span>    
                     </h2>
-                    <p className='max-w-xl mx-auto'
+                    <p className='max-w-xl mx-auto text-sm sm:text-base mb-12'
                     style={{color:darkMode?'#d1d5db':'#6b7280'}}
                     >A showcase of my recent projects</p>
                 </div>
@@ -32,7 +32,7 @@ const Projects=({darkMode})=>{
                                 data-aos='fade-up'
                                 data-aos-delay={index*100}
                                 >
-                                    <div className='h-56 overflow-hidden rounded-t-xl'>
+                                    <div className='h-40 overflow-hidden rounded-t-xl'>
                                         <img src={project.image} alt={project.title}
                                         className='w-full h-full object-fit group-hover:scale-110 transition-transform duration-500' />
                                     </div>
