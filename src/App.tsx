@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contacts from "./components/Contact";
 import Footer from "./components/Footer";
+import {Toaster} from "react-hot-toast";
 function App() {
   const [darkMode,setDarkMode]=useState(true);
   useEffect(()=>{
@@ -28,10 +29,12 @@ function App() {
         document.documentElement.classList.toggle('dark');
   };
   return (
+    
     <div className={
       darkMode
       ?'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
       : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'}> 
+      <Toaster position="top-right" reverseOrder={false} />
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <HeroSection darkMode={darkMode} />
       <About darkMode={darkMode}/>

@@ -2,14 +2,16 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { Mail ,Phone,MapPin} from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import toast from "react-hot-toast";
 const Contacts=({darkMode})=>{
-    const [formData, setFormData] = useState({
+    const initialFormData={
         firstName: "",
         lastName: "",
         email: "",
         phone: "",
         message: ""
-    });
+    };
+    const [formData, setFormData] = useState(initialFormData);
     const [status, setStatus]=useState("idle");
     const handleChange=(e)=>{
         setFormData({
@@ -18,7 +20,6 @@ const Contacts=({darkMode})=>{
         })
     };
     const handleSubmit=(e)=>{
-        console.log(formData);
         e.preventDefault();
         setStatus("sending");
         emailjs.send(
@@ -29,20 +30,16 @@ const Contacts=({darkMode})=>{
         )
         .then(() => {
             setStatus("success");
+            toast.success("Message sent successfully!");
+            setTimeout(() => {
+            setStatus("idle");
+            setFormData(initialFormData); 
+        }, 10000);
         })
         .catch(() => {
             setStatus("error");
+            toast.error("Failed to send message.");
         });
-        setTimeout(() => {
-            setStatus("idle");
-            setFormData({
-                firstName: "",
-                lastName: "",
-                email: "",
-                phone: "",
-                message: ""
-            }); 
-        }, 3000);
     };
 
     return (
@@ -237,17 +234,30 @@ const Contacts=({darkMode})=>{
                                 required
                                 />
                                 <button
-  type="submit"
-  disabled={status === "sending"}
-  className="w-full py-2 sm:py-3 text-white font-semibold rounded-lg text-sm sm:text-base 
-  hover:shadow-lg hover:shadow-orange-500/25 hover:scale-[1.02] transition-all"
-  style={{ background: 'linear-gradient(to right,#f97316,#f59e0b)' }}
->
-  {status === "sending" && "Submitting..."}
-  {status === "success" && "Message Sent ✅"}
-  {status === "error" && "Failed ❌ Try Again"}
-  {status === "idle" && "Send Message"}
-</button>
+                                type="submit"
+                                disabled={status === "sending"}
+                                
+                                className={`w-full py-2 sm:py-3 text-white font-semibold rounded-lg text-sm sm:text-base 
+                                transition-all ${status === "sending"
+                                ? "opacity-50 cursor-not-allowed"
+                                : "hover:shadow-lg hover:shadow-orange-500/25 hover:scale-[1.02]"
+                                }`}  
+                                style={{ background: 'linear-gradient(to right,#f97316,#f59e0b)' }}
+                                >
+                                    {status === "sending" ? (
+                                        <>
+                                        <span className="w-2 h-2 border-2 border-white border-t-black rounded-full animate-spin"></span>
+                                        Sending...
+                                        </>
+                                    ) : status === "success" ? (
+                                        "Message Sent ✅"
+                                    ) : status === "error" ? (
+                                        "Try Again ❌"
+                                    ) : (
+                                        "Send Message"
+                                    )}
+                                </button>
+                                
                             </div>
                         </div>
                     </form>
