@@ -1,10 +1,11 @@
 import React from "react";
 import { FaPython,FaJs,FaReact, FaNodeJs, FaHtml5, FaCss3} from "react-icons/fa";
-import { SiExpress, SiMongodb  } from "react-icons/si";
+import { SiExpress, SiMongodb,SiPostman  } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaGitAlt } from "react-icons/fa";
 import {SiCplusplus ,SiTailwindcss} from "react-icons/si";
 import { motion } from "framer-motion";
+import { FaGithub, } from "react-icons/fa";
 import { div } from "framer-motion/client";
 import { TbBrandFramerMotion } from "react-icons/tb";
 const Skills= ({darkMode})=>{
@@ -44,7 +45,9 @@ const Skills= ({darkMode})=>{
             title: "Tools",
             skills: [
             { name: "Git", icon: <FaGitAlt /> },
-            {name:"VS Code", icon:<VscVscode/> }
+            {name:"VS Code", icon:<VscVscode/> },
+            { name: "GitHub", icon: <FaGithub /> },
+            { name: "Postman", icon: <SiPostman /> },
             ],
         },
         {
