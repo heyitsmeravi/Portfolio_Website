@@ -16,9 +16,7 @@ export default function About({darkMode}){
                     data-aos='fade-up'
                     data-aos-delay='500'>
                         I’m a full-stack developer focused on building scalable, user-friendly web applications. I work with JavaScript, React, Node.js, Python, and the MERN stack to turn ideas into real-world solutions. <br />
-
                         Alongside development, I actively strengthen my problem-solving skills through Data Structures & Algorithms . I enjoy learning new technologies, building impactful projects, and continuously improving as a developer.
-
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 sm:gap06 lg:gap-8 mb-6 sm:mb-8">
                         <div className="text-center"
