@@ -8,12 +8,19 @@ import { motion } from "framer-motion";
 import { FaGithub, } from "react-icons/fa";
 // import { div } from "framer-motion/client";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import type { JSX } from "react";
 interface SkillsProps{
     darkMode:boolean;
 }
-
+type Skill = {
+  name: string;
+  icon?: JSX.Element;
+};
 const Skills= ({darkMode}:SkillsProps)=>{
-    const skillCategories = [
+    const skillCategories:{
+        title:string;
+        skills:Skill[];
+    }[] = [
         {
             title: "Languages",
             skills: [

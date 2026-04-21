@@ -225,7 +225,7 @@ const Contacts=({darkMode}:ContactsProps)=>{
                                 />
                                 <textarea
                                 name="message"
-                                rows='4'
+                                rows={4}
                                 placeholder="Your Message"
                                 value={formData.message}
                                 onChange={handleChange}
