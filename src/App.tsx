@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 import Contacts from "./components/Contact";
 import Footer from "./components/Footer";
 import {Toaster} from "react-hot-toast";
+import ChatButton from "./components/ChatButton";
 function App() {
   const [darkMode,setDarkMode]=useState(true);
   useEffect(()=>{
@@ -23,13 +24,12 @@ function App() {
   useEffect(()=>{
     AOS.refresh()
   },[darkMode])
-  const toggleDarkMode=()=>{
+  const toggleDarkMode=(): void=>{
         const newMode=!darkMode;
         setDarkMode(newMode);
         document.documentElement.classList.toggle('dark');
   };
   return (
-    
     <div className={
       darkMode
       ?'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
@@ -42,6 +42,7 @@ function App() {
       <Projects darkMode={darkMode}/>
       <Contacts darkMode={darkMode}/>
       <Footer darkMode={darkMode}/>
+      <ChatButton />
     </div>
   );
 }

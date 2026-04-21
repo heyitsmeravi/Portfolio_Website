@@ -1,4 +1,9 @@
-export default function About({darkMode}){
+
+interface AboutProps{
+    darkMode:boolean;
+}
+
+export default function About({darkMode}:AboutProps){
     
     return (
         <section id="about" className={`min-h-screen overflow-hidden items-center flex justify-center px-4 sm:px-6 ${darkMode?'bg-gray-900':'bg-gray-50'}`}>

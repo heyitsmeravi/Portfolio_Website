@@ -10,7 +10,10 @@ import { motion } from "framer-motion";
 import { DownloadIcon,Mail} from "lucide-react";
 import {FaInstagram, FaFacebook, FaGithub, FaLinkedin, FaYoutube} from "react-icons/fa"
 import { Typewriter } from "react-simple-typewriter";
-export default function HeroSection({darkMode}){
+interface HeroSectionProps{
+    darkMode:boolean;
+}
+export default function HeroSection({darkMode}:HeroSectionProps){
     const socialIcons= [
         {
             icon:<FaInstagram/>,alt:'instagram',link:'https://instagram.com/hey_itsme_ravi'

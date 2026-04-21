@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { FaPython,FaJs,FaReact, FaNodeJs, FaHtml5, FaCss3} from "react-icons/fa";
 import { SiExpress, SiMongodb,SiPostman  } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
@@ -6,9 +6,13 @@ import { FaGitAlt } from "react-icons/fa";
 import {SiCplusplus ,SiTailwindcss} from "react-icons/si";
 import { motion } from "framer-motion";
 import { FaGithub, } from "react-icons/fa";
-import { div } from "framer-motion/client";
+// import { div } from "framer-motion/client";
 import { TbBrandFramerMotion } from "react-icons/tb";
-const Skills= ({darkMode})=>{
+interface SkillsProps{
+    darkMode:boolean;
+}
+
+const Skills= ({darkMode}:SkillsProps)=>{
     const skillCategories = [
         {
             title: "Languages",

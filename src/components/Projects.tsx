@@ -1,7 +1,11 @@
 import melodix from '../assets/melodix.png'
 import calculator from '../assets/calculator.png'
-import { FaArrowAltCircleUp, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-const Projects=({darkMode})=>{
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+interface ProjectsProps{
+    darkMode:boolean;
+}
+
+const Projects=({darkMode}:ProjectsProps)=>{
     const projects=[
         {id:1,title:'Melodix: A Music Webplayer',desc:'It is a music webplayer built using html, css, js',image:melodix,tags:['html','css','java']},
         {id:2,title:'Calculator',desc:'Dual theme calculator',image:calculator,tags:['html','css','java']}

@@ -3,7 +3,11 @@ import emailjs from "emailjs-com";
 import { Mail ,Phone,MapPin} from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import toast from "react-hot-toast";
-const Contacts=({darkMode})=>{
+interface ContactsProps{
+    darkMode:boolean;
+}
+
+const Contacts=({darkMode}:ContactsProps)=>{
     const initialFormData={
         firstName: "",
         lastName: "",
@@ -13,13 +17,13 @@ const Contacts=({darkMode})=>{
     };
     const [formData, setFormData] = useState(initialFormData);
     const [status, setStatus]=useState("idle");
-    const handleChange=(e)=>{
+    const handleChange=(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
         setFormData({
             ...formData,
             [e.target.name]:e.target.value
         })
     };
-    const handleSubmit=(e)=>{
+    const handleSubmit=(e: React.SubmitEvent<HTMLFormElement>)=>{
         e.preventDefault();
         setStatus("sending");
         emailjs.send(

@@ -1,7 +1,10 @@
 
 import { FaGithub, FaHeart, FaInstagram, FaLinkedin } from "react-icons/fa";
+interface FooterProps{
+    darkMode:boolean;
+}
 
-const Footer= ({darkMode})=>{
+const Footer= ({darkMode}:FooterProps)=>{
     const currentYear= new Date().getFullYear();
 
     return (

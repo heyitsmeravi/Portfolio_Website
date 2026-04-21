@@ -1,9 +1,13 @@
-import { useState,useEffect } from "react";
-import AOS from 'aos';
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Sun,Moon,X ,Menu} from "lucide-react";
 import 'aos/dist/aos.css';
-export default function Navbar({darkMode,toggleDarkMode}){
+interface NavbarProps{
+    darkMode:boolean;
+    toggleDarkMode:()=>void;
+}
+
+export default function Navbar({darkMode,toggleDarkMode}:NavbarProps){
     const [isActive,setIsActive]=useState("home");
     const [isMenuOpen,setIsMenuOpen]=useState(false);
     const navItems=[
@@ -32,7 +36,7 @@ export default function Navbar({darkMode,toggleDarkMode}){
         button: 'from-orange-500 to-amber-500'
     };
     const colors = darkMode?darkColors:lightColors;
-    const handleNavClick = (itemName:"string")=>{
+    const handleNavClick = (itemName:string)=>{
         setIsActive(itemName.toLowerCase());
         setIsMenuOpen(false);
     }
