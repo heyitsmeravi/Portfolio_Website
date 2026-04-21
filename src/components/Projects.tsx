@@ -1,5 +1,6 @@
 import melodix from '../assets/melodix.png'
 import calculator from '../assets/calculator.png'
+import mangata_gallo from '../assets/mangata_gallo.png'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 interface ProjectsProps{
     darkMode:boolean;
@@ -7,8 +8,10 @@ interface ProjectsProps{
 
 const Projects=({darkMode}:ProjectsProps)=>{
     const projects=[
-        {id:1,title:'Melodix: A Music Webplayer',desc:'It is a music webplayer built using html, css, js',image:melodix,tags:['html','css','java']},
-        {id:2,title:'Calculator',desc:'Dual theme calculator',image:calculator,tags:['html','css','java']}
+        {id:1,title:'Melodix: A Music Webplayer',desc:'It is a music webplayer built using html, css, js',image:melodix,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Melodix/',code:'https://github.com/heyitsmeravi/Melodix'},
+        {id:2,title:'Calculator',desc:'Dual theme calculator',image:calculator,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Portfolio/Projects/Calculator_with_dual_Theme/index.html',code:'https://github.com/heyitsmeravi/Portfolio/blob/main/Projects/Calculator_with_dual_Theme/index.html'},
+        {id:3,title:'Mangata and Gallo Website',desc:'Jewellery Shopping Website',image:mangata_gallo,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Mangata_Gallo_Website/index.html',code:'https://github.com/heyitsmeravi/Mangata_Gallo_Website'}
+
     ];
     return(
         <section id="projects" 
@@ -36,15 +39,15 @@ const Projects=({darkMode}:ProjectsProps)=>{
                             {/* Image Section */}
                             <div className="w-full lg:w-3/5 relative group z-10" data-aos={index % 2 !== 0 ? 'fade-left' : 'fade-right'}>
                                 {/* Offset decorative background */}
-                                <div className={`absolute inset-0 bg-linear-to-br from-orange-500 to-amber-500 opacity-20 rounded-2xl transform transition-transform duration-500 ${index % 2 !== 0 ? '-translate-x-3 sm:-translate-x-4' : 'translate-x-3 sm:translate-x-4'} translate-y-3 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6`}></div>
+                                <div className={`absolute inset-0 bg-linear-to-br from-orange-500 to-orange-600 opacity-50 rounded-2xl transform transition-transform duration-500 ${index % 2 !== 0 ? '-translate-x-3 sm:-translate-x-4' : 'translate-x-3 sm:translate-x-4'} translate-y-3 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6`}></div>
                                 
                                 <div className={`relative overflow-hidden rounded-2xl shadow-2xl border ${darkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-white'}`}>
                                     <img src={project.image} alt={project.title} 
-                                         className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" />
+                                         className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-contain transition-transform duration-700 group-hover:scale-105" />
                                     
                                     {/* Hover Overlay */}
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-xs">
-                                         <a href="#" className="p-4 bg-orange-500 rounded-full text-white transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl hover:bg-amber-500 hover:scale-110">
+                                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-4 bg-orange-500 rounded-full text-white transform translate-y-8 group-hover:translate-y-0 transition-all duration-300 shadow-xl hover:bg-amber-500 hover:scale-110">
                                              <FaExternalLinkAlt size={24} />
                                          </a>
                                     </div>
@@ -89,10 +92,10 @@ const Projects=({darkMode}:ProjectsProps)=>{
                                 {/* Links */}
                                 <div className={`flex gap-6 sm:gap-8 relative z-10 justify-center ${index % 2 !== 0 ? 'lg:justify-end' : 'lg:justify-start'}`}
                                      data-aos='fade-up' data-aos-delay='400'>
-                                     <a href="#" className={`flex items-center gap-2 font-bold transition-all hover:-translate-y-1 ${darkMode ? 'text-gray-300 hover:text-orange-400' : 'text-gray-700 hover:text-orange-500'}`}>
+                                     <a href={project.code} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 font-bold transition-all hover:-translate-y-1 ${darkMode ? 'text-gray-300 hover:text-orange-400' : 'text-gray-700 hover:text-orange-500'}`}>
                                         <FaGithub size={22}/> <span className="text-base">View Code</span>
                                      </a>
-                                     <a href="#" className={`flex items-center gap-2 font-bold transition-all hover:-translate-y-1 ${darkMode ? 'text-gray-300 hover:text-orange-400' : 'text-gray-700 hover:text-orange-500'}`}>
+                                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 font-bold transition-all hover:-translate-y-1 ${darkMode ? 'text-gray-300 hover:text-orange-400' : 'text-gray-700 hover:text-orange-500'}`}>
                                         <FaExternalLinkAlt size={20}/> <span className="text-base">Live Demo</span>
                                      </a>
                                 </div>
