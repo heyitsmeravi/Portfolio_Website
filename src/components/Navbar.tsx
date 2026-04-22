@@ -131,7 +131,7 @@ export default function Navbar({darkMode,toggleDarkMode}:NavbarProps){
                             </a>
                         ))}
                         <motion.a 
-                        href="#contact" 
+                        href="mailto:ravijnv2428@gmail.com" 
                         onClick={()=> setIsMenuOpen(false)}
                         whileTap={{scale:0.95}}
                         className={`block py-3 px-4 text-center font-semibold rounded-lg bg-linear-to-r ${colors.button} text-white shadow-md`}>
