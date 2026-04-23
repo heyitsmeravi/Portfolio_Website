@@ -39,7 +39,7 @@ const Projects=({darkMode}:ProjectsProps)=>{
                             {/* Image Section */}
                             <div className="w-full lg:w-3/5 relative group z-10" data-aos={index % 2 !== 0 ? 'fade-left' : 'fade-right'}>
                                 {/* Offset decorative background */}
-                                <div className={`absolute inset-0 bg-linear-to-br from-orange-500 to-orange-600 opacity-50 rounded-2xl transform transition-transform duration-500 ${index % 2 !== 0 ? '-translate-x-3 sm:-translate-x-4' : 'translate-x-3 sm:translate-x-4'} translate-y-3 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6`}></div>
+                                <div className={`absolute inset-0 bg-linear-to-br from-orange-500 to-amber-500 rounded-2xl transform transition-transform duration-500 ${index % 2 !== 0 ? '-translate-x-3 sm:-translate-x-4' : 'translate-x-3 sm:translate-x-4'} translate-y-3 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6`}></div>
                                 
                                 <div className={`relative overflow-hidden rounded-2xl shadow-2xl border ${darkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-200 bg-white'}`}>
                                     <img src={project.image} alt={project.title} 
@@ -58,7 +58,7 @@ const Projects=({darkMode}:ProjectsProps)=>{
                             <div className={`w-full lg:w-2/5 flex flex-col relative z-20 text-center ${index % 2 !== 0 ? 'lg:items-end lg:text-right' : 'lg:items-start lg:text-left'}`}>
                                 
                                 {/* Background Number */}
-                                <span className={`text-[8rem] lg:text-[12rem] font-black absolute -top-16 lg:-top-24 opacity-[0.03] select-none pointer-events-none ${darkMode ? 'text-white' : 'text-black'}`}
+                                <span className={`text-[8rem] lg:text-[12rem] font-black absolute -top-16 lg:-top-24 opacity-[0.05] select-none pointer-events-none ${darkMode ? 'text-white' : 'text-black'}`}
                                       style={{[index % 2 !== 0 ? 'right' : 'left']: '0'}}>
                                     0{index + 1}
                                 </span>
