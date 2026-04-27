@@ -100,8 +100,7 @@ export default function HeroSection({darkMode}:HeroSectionProps){
                         data-aos='fade-up'
                         data-aos-delay='600'
                         data-aos-once='true'>
-                            Currently pursuing B.Tech in Information Technology at Muzaffarpur Institute of Technology, and I am passionate about 
-                            Software Development, Data Science, and innovative Technologies. My goal is to leverage my skills to solve real-world problems and create impactful solutions.
+                            I am an Information Technology student at Muzaffarpur Institute of Technology, passionate about Full-Stack Web Development. I enjoy building interactive applications using React, backed by strong problem-solving skills in C++. Constantly expanding my knowledge in TypeScript, Python, and Java to create impactful real-world solutions.
                         </p>
                         <div className="sm:w-full pt-4 sm:pt-6">
                             <div className="flex sm:flex-row justify-center lg:justify-start gap-3 sm:gap-5"
