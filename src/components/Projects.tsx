@@ -1,6 +1,6 @@
 import melodix from '../assets/melodix.png'
 import mangata_gallo from '../assets/mangata_gallo.png'
-import Tomato_foodDel from '../assets/Tomato_foodDel.png'
+import Tomato_foodDel from '../assets/Tomato_FoodDel.png'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 interface ProjectsProps{
     darkMode:boolean;
