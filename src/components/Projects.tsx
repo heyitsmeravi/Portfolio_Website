@@ -1,6 +1,7 @@
 import melodix from '../assets/melodix.png'
 import calculator from '../assets/calculator.png'
 import mangata_gallo from '../assets/mangata_gallo.png'
+import Tomato_foodDel from '../assets/Tomato_foodDel.png'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 interface ProjectsProps{
     darkMode:boolean;
@@ -8,8 +9,8 @@ interface ProjectsProps{
 
 const Projects=({darkMode}:ProjectsProps)=>{
     const projects=[
-        {id:1,title:'Melodix: A Music Webplayer',desc:'It is a music webplayer built using html, css, js',image:melodix,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Melodix/',code:'https://github.com/heyitsmeravi/Melodix'},
-        {id:2,title:'Calculator',desc:'Dual theme calculator',image:calculator,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Portfolio/Projects/Calculator_with_dual_Theme/index.html',code:'https://github.com/heyitsmeravi/Portfolio/blob/main/Projects/Calculator_with_dual_Theme/index.html'},
+        {id:1,title:'Full Stack Food Delivery Website',desc:'A full-stack food delivery website with a modern design',image:Tomato_foodDel,tags:['React JS','Node JS','MongoDB','Express JS','Stripe','Tailwind CSS'],demo:'https://tomato-food-delivery-lac.vercel.app/',code:'https://github.com/heyitsmeravi/tomato-Food_Delivery/tree/main'},
+        {id:2,title:'Melodix: A Music Webplayer',desc:'It is a music webplayer built using html, css, js',image:melodix,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Melodix/',code:'https://github.com/heyitsmeravi/Melodix'},
         {id:3,title:'Mangata and Gallo Website',desc:'Jewellery Shopping Website',image:mangata_gallo,tags:['html','css','java'],demo:'https://heyitsmeravi.github.io/Mangata_Gallo_Website/index.html',code:'https://github.com/heyitsmeravi/Mangata_Gallo_Website'}
 
     ];
