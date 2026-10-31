@@ -1,5 +1,4 @@
 import melodix from '../assets/melodix.png'
-import calculator from '../assets/calculator.png'
 import mangata_gallo from '../assets/mangata_gallo.png'
 import Tomato_foodDel from '../assets/Tomato_foodDel.png'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
